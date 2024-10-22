@@ -1,4 +1,5 @@
-const express = require(`express`); //importar la libreria 
+import express from 'express'
+//const express = require(`express`); //importar la libreria 
 
 const app = express()
 
