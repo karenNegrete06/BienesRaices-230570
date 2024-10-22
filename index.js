@@ -1,6 +1,6 @@
 import express from 'express'
 //const express = require(`express`); //importar la libreria 
-
+import generalRoutes from './Routes/generalRoutes.js'
 const app = express()
 
 //configuramos nuestro servidor web 
@@ -10,17 +10,4 @@ app.listen(port,()=>{
 })
 
 // Probamos las rutas para poder presentar mensajes  al usario a traves del navegador 
-app.get("/",function(req,res){
-    res.send("Hola mundo desde Node, atraves del Navegador")
-})
-
-
-app.get("/QuienSoy",function(req,res){
-    res.send({"Estudiante": "Karen Lizbeth Negrete Hernández",
-    "carrera": "TI DSM",
-    "grado": "4°",
-    "grupo": "B",
-    "asignatura": "aplicaciones web orientada a servicios (AWOS)"
-
-})
-})
+app.use('/',generalRoutes);
